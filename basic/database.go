@@ -13,7 +13,7 @@ import (
 var db *gorm.DB
 var locker sync.RWMutex
 
-var TABLE_PREFIX = "kenneth_"
+var TABLE_PREFIX = "prefix_"
 
 func init() {
 	locker.Lock()
@@ -21,7 +21,7 @@ func init() {
 	env, _ := godotenv.Read(".env")
 	url := env["MYSQL_DNS"]
 	if url == "" {
-		url = "kenneth:123asdzxc@tcp(43.199.73.102:3310)/kenneth?charset=utf8&parseTime=True&loc=Local"
+		url = "forge:forge@tcp(127.0.0.1:3306)/database?charset=utf8&parseTime=True&loc=Local"
 	}
 	TABLE_PREFIX = env["TABLE_PREFIX"]
 
