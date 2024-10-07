@@ -1,0 +1,60 @@
+package command
+
+import (
+	"kenneth/backend/basic/command"
+	"kenneth/backend/model"
+	"kenneth/backend/storage"
+	"net/http"
+)
+
+type {{ properCase name}}Command struct {
+	command.RESTCommand
+}
+
+func (dc *{{ properCase name}}Command) NeedPermission() int {
+	return 0
+}
+
+func (dc *{{ properCase name}}Command) NeedLogin() bool {
+	return true
+}
+
+func (dc *{{ properCase name}}Command) CacheKey() string {
+	return ""
+}
+
+func (dc *{{ properCase name}}Command) Valid() error {
+	return nil
+}
+
+func (dc *{{ properCase name}}Command) Name() string {
+	return "FindCommand"
+}
+
+func (dc *{{ properCase name}}Command) Execute(u *model.User) (interface{}, error) {
+	store := storage.{{ properCase name}}{}
+	switch dc.Action {
+	case "search":
+		return store.Search(dc.SearchParameter)
+	case "create":
+		return store.Create(dc.Data)
+	case "update":
+		return store.Update(dc.ID, dc.Data)
+	case "delete":
+		return nil, store.Delete(dc.ID)
+	}
+	return store.Find(dc.ID)
+}
+
+func (dc *{{ properCase name}}Command) Status(u *model.User) int64 {
+	return 0
+}
+
+func (dc *{{ properCase name}}Command) Region(u *model.User) string {
+	return ""
+}
+
+func HTTPREST{{ properCase name}}(r *http.Request) command.Command {
+	cmd := &{{ properCase name}}Command{}
+	return cmd
+}

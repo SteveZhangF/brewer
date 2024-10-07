@@ -1,0 +1,8 @@
+	basicCommand.NewHttpHandler(command.HTTPREST{{ properCase name}}, basicCommand.CommandHTTPHandlerOptions{
+		REST:  "{{ snakeCase name}}s",
+		Log:   true,
+		Valid: true,
+		Auth:  false,
+	}).Register(r)
+
+  // ADD MORE ROUTERS HERE DO NOT DELETE THIS LINE

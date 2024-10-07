@@ -1,0 +1,16 @@
+{
+  "name": "create-your-name-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "plop"
+  },
+  "bin": {
+    "create-your-name-app": "./index.js"
+  },
+  "type": "module",
+  "preferGlobal": true,
+  "dependencies": {
+    "plop": "^4.0.1"
+  }
+}
