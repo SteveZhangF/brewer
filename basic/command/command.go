@@ -1,9 +1,11 @@
 package command
 
 import (
-	"kenneth/backend/basic"
-	model "kenneth/backend/model"
 	"net/http"
+
+	"github.com/SteveZhangF/brewer/basic"
+
+	"github.com/SteveZhangF/brewer/basic/model"
 )
 
 type Command interface {

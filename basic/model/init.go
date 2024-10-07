@@ -1,8 +1,7 @@
 package model
 
 import (
-	"kenneth/backend/basic"
-
+	"github.com/SteveZhangF/brewer/basic"
 	_ "github.com/go-sql-driver/mysql"
 	"gorm.io/gorm"
 )

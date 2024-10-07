@@ -2,8 +2,9 @@ package command
 
 import (
 	"encoding/json"
-	"kenneth/backend/basic"
 	"net/http"
+
+	"github.com/SteveZhangF/brewer/basic"
 )
 
 type Proxy interface {

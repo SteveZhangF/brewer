@@ -2,14 +2,12 @@ package main
 
 import (
 	"fmt"
-	_ "kenneth/backend/basic"
-	basicCommand "kenneth/backend/basic/command"
-	"kenneth/backend/command"
-	_ "kenneth/backend/model"
 	"net"
 	"net/http"
 	"time"
 
+	basicCommand "github.com/SteveZhangF/brewer/basic/command"
+	"github.com/SteveZhangF/brewer/command"
 	"github.com/gorilla/mux"
 )
 
@@ -34,29 +32,6 @@ func main() {
 
 	// 初始化配置
 	r := mux.NewRouter()
-
-	// basicCommand.NewHttpHandler(command.HTTPOrdersPayment, basicCommand.CommandHTTPHandlerOptions{
-	// 	Path:    "/orders/payment",
-	// 	Log:     true,
-	// 	Valid:   true,
-	// 	Auth:    true,
-	// 	Methods: []string{"POST", "OPTIONS"},
-	// }).Register(r)
-
-	// basicCommand.NewHttpHandler(command.HTTPRESTPayment, basicCommand.CommandHTTPHandlerOptions{
-	// 	REST:  "payments",
-	// 	Log:   true,
-	// 	Valid: true,
-	// 	Auth:    true,
-	// }).Register(r)
-
-	// basicCommand.NewHttpHandler(command.HTTPPaymentPay, basicCommand.CommandHTTPHandlerOptions{
-	// 	Path:    "/payments/{id}/pay",
-	// 	Log:     true,
-	// 	Valid:   true,
-	// 	Auth:    true,
-	// 	Methods: []string{"POST", "OPTIONS"},
-	// }).Register(r)
 
 	basicCommand.NewHttpHandler(command.HTTPUserLogin, basicCommand.CommandHTTPHandlerOptions{
 		Path:    "/login",

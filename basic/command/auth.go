@@ -1,8 +1,8 @@
 package command
 
 import (
-	"kenneth/backend/basic/errors"
-	model "kenneth/backend/model"
+	"github.com/SteveZhangF/brewer/basic/errors"
+	"github.com/SteveZhangF/brewer/basic/model"
 )
 
 // "github.com/gurufocus/gfmicro-common/errors"

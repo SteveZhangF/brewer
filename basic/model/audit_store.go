@@ -3,10 +3,10 @@ package model
 import (
 	"encoding/json"
 	"fmt"
-	"kenneth/backend/basic"
-	"kenneth/backend/basic/errors"
 	"strings"
 
+	"github.com/SteveZhangF/brewer/basic"
+	"github.com/SteveZhangF/brewer/basic/errors"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

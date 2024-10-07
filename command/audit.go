@@ -1,9 +1,10 @@
 package command
 
 import (
-	"kenneth/backend/basic/command"
-	"kenneth/backend/model"
 	"net/http"
+
+	"github.com/SteveZhangF/brewer/basic/command"
+	"github.com/SteveZhangF/brewer/basic/model"
 )
 
 type AuditCommand struct {

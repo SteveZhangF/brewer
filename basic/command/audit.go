@@ -2,10 +2,10 @@ package command
 
 import (
 	"encoding/json"
-	model "kenneth/backend/model"
 	"net/http"
 	"strings"
 
+	"github.com/SteveZhangF/brewer/basic/model"
 	"github.com/sirupsen/logrus"
 )
 

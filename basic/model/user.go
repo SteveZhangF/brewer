@@ -1,8 +1,7 @@
 package model
 
 import (
-	"kenneth/backend/basic/errors"
-
+	"github.com/SteveZhangF/brewer/basic/errors"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

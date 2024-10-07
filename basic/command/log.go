@@ -1,8 +1,7 @@
 package command
 
 import (
-	model "kenneth/backend/model"
-
+	"github.com/SteveZhangF/brewer/basic/model"
 	"github.com/sirupsen/logrus"
 )
 
