@@ -42,6 +42,15 @@ func main() {
 		Methods: []string{"POST", "OPTIONS"},
 	}).Register(r)
 
+	basicCommand.NewHttpHandler(command.HTTPUserRegister, basicCommand.CommandHTTPHandlerOptions{
+		Path:    "/register",
+		Log:     true,
+		Audit:   true,
+		Valid:   true,
+		Auth:    false,
+		Methods: []string{"POST", "OPTIONS"},
+	}).Register(r)
+
 	basicCommand.NewHttpHandler(command.HTTPUserLogout, basicCommand.CommandHTTPHandlerOptions{
 		Path:    "/user/logout",
 		Log:     true,

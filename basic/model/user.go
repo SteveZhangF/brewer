@@ -7,12 +7,12 @@ import (
 )
 
 type User struct {
-	ID           uint   `json:"id"`
-	Name         string `json:"name"`
-	UserName     string `json:"username"`
-	Password     string `json:"-"`
-	IsGuest      bool
-	Level        int
+	ID           uint     `json:"id"`
+	Name         string   `json:"name"`
+	UserName     string   `json:"username"`
+	Password     string   `json:"-"`
+	IsGuest      bool     `json:"is_guest" gorm:"-"`
+	Level        int      `json:"level" gorm:"column:level"`
 	Roles        []string `json:"roles" gorm:"-"`
 	Introduction string   `json:"introduction"`
 	Avatar       string   `json:"avatar"`
